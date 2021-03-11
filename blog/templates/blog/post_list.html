@@ -5,9 +5,12 @@
   <body>
     <h1>Здравствуйте, смертные!</h1>
     <p>Все заработало!</p>
-    <div>
-      <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="https://sverhestestvennoe.club/1sez-33">Сверхъествественное 1 сезон </a></h2>
-            <p>Бегом смотреть 1 сезон!</p>
+    {% for post in posts %}
+      <div>
+        <p>published: {{post.published_date}} </p>
+        <h2><a href = "">{{post.title}}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+      {% endfor %}
   </body>
 </html>
